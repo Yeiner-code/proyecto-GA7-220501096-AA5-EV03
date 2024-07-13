@@ -4,7 +4,7 @@
 
 @section('contenido')
 <br>
-<h3 class="tex-center">Listado de Cursos Disponibles</h3>
+<h3 class="tex-center">Listado de Cursos o Libros Disponibles</h3>
 <br>
 <div class="row">
 @foreach ($course as $cursito)

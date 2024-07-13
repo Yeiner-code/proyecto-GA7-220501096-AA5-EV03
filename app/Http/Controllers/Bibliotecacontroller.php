@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Tienda;
+use App\Models\Biblioteca;
 use Illuminate\Http\Request;
 
-class MovilController extends Controller
+class Bibliotecacontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,6 +14,9 @@ class MovilController extends Controller
      */
     public function index()
     {
+        $course = Biblioteca::all();
+        //return $course;
+        return view('cursos.index',compact('course'));
 
     }
 
@@ -24,7 +27,7 @@ class MovilController extends Controller
      */
     public function create()
     {
-        return view('tiendas.create');
+        return view('bibliotecas.create');
 
     }
 
@@ -36,7 +39,14 @@ class MovilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $course = new Biblioteca();
+        $course->nombre = $request->input('nombre');
+        $course->descripcion = $request->input('descripcion');
+
+        $course->save();
+
+        return 'Guardado Exitoso';
+
     }
 
     /**

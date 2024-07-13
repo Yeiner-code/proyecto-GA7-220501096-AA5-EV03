@@ -8,7 +8,7 @@
     <form action="/cursos" method="post">
         @csrf
         <div class="mb-3">
-          <label for="Nombrecurso" class="form-label">Nombre del curso o libro</label>
+          <label for="Nombrecurso" class="form-label">Nombre del curso o Libro</label>
           <input type="text" class="form-control" id="nombre" name="nombre">
 
         </div>

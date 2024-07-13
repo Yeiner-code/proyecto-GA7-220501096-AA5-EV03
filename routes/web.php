@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\Bibliotecacontroller;
 use App\Http\Controllers\CursoController;
-use App\Http\Controllers\MovilController;
 use App\Http\Controllers\SaludoController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +23,7 @@ Route::get('/saludo',[SaludoController::class,'saludito']);
 
 route::resource('/cursos' ,CursoController::class);
 
-route::resource('/mundomovil' ,MovilController::class);
+Route::resource('/biblioteca' , Bibliotecacontroller::class);
+
 
 
