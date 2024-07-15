@@ -10,11 +10,11 @@
 @foreach ($course as $cursito)
 <div class="col-sm">
     <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img style="height: 200px; width: 250px; margin: 20px;" src="{{ Storage::url($cursito->imagen) }}" class="card-img-top mx-auto d-block" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{$cursito->nombre}}</h5>
           <p class="card-text">{{$cursito->descripcion}}</p>
-          <a href="#" class="btn btn-primary">Ver detalles</a>
+          <a href="/cursos/{{$cursito->id}}" class="btn btn-primary">Ver detalles</a>
         </div>
       </div>
 </div>
